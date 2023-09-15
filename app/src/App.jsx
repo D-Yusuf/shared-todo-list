@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import List from './List'
+import ItemForm from './components/ItemForm'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className="container flex flex-col items-center absolute top-1/2 -translate-y-1/2 ">
+      <ItemForm/>
       <List />
-    </>
+    </div>
   )
 }
 
