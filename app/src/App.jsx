@@ -4,7 +4,9 @@ import ItemForm from './components/ItemForm'
 function App() {
 
   return (
-    <div className="container flex flex-col items-center absolute top-1/2 -translate-y-1/2 ">
+    <div className="container flex flex-col items-center min-h-screen">
+            <h1 className="font-extrabold text-4xl my-5">TO-DO</h1>
+
       <ItemForm/>
       <List />
     </div>
@@ -12,3 +14,4 @@ function App() {
 }
 
 export default App
+

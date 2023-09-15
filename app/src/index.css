@@ -5,5 +5,13 @@
 @layer base{
   body{
     @apply bg-[#F3FFC6] font-space;
+    
   }
+  *::-webkit-scrollbar{
+    display: none;
+  }
+  *{
+    scrollbar-arrow-color: aqua;
+  }
+
 }
