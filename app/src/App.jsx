@@ -1,5 +1,5 @@
 import List from './List'
-import ItemForm from './components/ItemForm'
+// import ItemForm from './components/ItemForm'
 
 function App() {
 
@@ -7,7 +7,7 @@ function App() {
     <div className="container flex flex-col items-center min-h-screen">
             <h1 className="font-extrabold text-4xl my-5">TO-DO</h1>
 
-      <ItemForm/>
+      
       <List />
     </div>
   )
