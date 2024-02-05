@@ -7,7 +7,7 @@ export default [
     {
         id: 2,
         task: "Cleaning the gym",
-        isDone: true,
+        isDone: false,
     },
     {
         id: 3,

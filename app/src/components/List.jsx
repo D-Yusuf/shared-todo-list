@@ -2,23 +2,32 @@ import ListItem from "./ListItem";
 import data from "../js/data";
 import ListForm from "./ListForm";
 import { useEffect, useState } from "react";
-import ListItems from "./ListItems";
 export default function List(){
-    const [items, setItems] = useState(data)
+    const [items, setItems] = useState(JSON.parse(localStorage.getItem("items")) || data)
     function setItemsData(){
-        console.log("AAA")
         setItems(data)
-        console.log(items)
     }
-    
+    function toggleDone(id){
+        const handledItem = items.filter((item, i)=>{
+            items[i].id == id ? items.splice(i, 1) : ""
+            return item.id == id
+        })[0]
+        handledItem.isDone = !handledItem.isDone
+        setItems(prevState=> [...prevState, handledItem])
+
+    }
     useEffect(()=>{
-        console.log(items)
+        localStorage.setItem("items", JSON.stringify(items))
+
     }, [items])
+    const dataItems = items.map(item =>  <ListItem key={item.id} task={item.task} isDone={item.isDone} handleChange={()=> toggleDone(item.id)} />)
+
     return(
     <div>
         <ListForm setItemsData={setItemsData}/>
-        <ListItems items={}/>
-        
+        <div className="flex flex-col items-center overflow-y-auto h-96 space-y-5">
+            {dataItems}
+        </div>
     </div>
     )
 }
