@@ -2,22 +2,22 @@ export default [
     {
         id: 1,
         task: "Cleaning the room",
-        done: false,
+        isDone: false,
     },
     {
         id: 2,
         task: "Cleaning the gym",
-        done: false,
+        isDone: true,
     },
     {
         id: 3,
         task: "Cleaning the baby",
-        done: false,
+        isDone: false,
     },
     {
         id: 4,
         task: "Cleaning myself",
-        done: false,
+        isDone: false,
     },
 ]
 

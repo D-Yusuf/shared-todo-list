@@ -1,17 +1,22 @@
-import List from './List'
-// import ItemForm from './components/ItemForm'
+import { useEffect } from 'react'
+import ListForm from './components/ListForm'
+import data from './js/data'
+import List from './components/List'
 
-function App() {
-
+export default function App() {
+  // useEffect(()=>{
+  //   console.log("data changed!")
+  // }, [data])
   return (
-    <div className="container flex flex-col items-center min-h-screen">
+    <div className="container flex flex-col items-center">
             <h1 className="font-extrabold text-4xl my-5">TO-DO</h1>
 
       
+
       <List />
     </div>
   )
 }
 
-export default App
+
 
